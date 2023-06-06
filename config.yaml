@@ -2,7 +2,7 @@ baseURL: ""
 languageCode: 'en-us'
 title: "Cryptic Blend"
 #theme: 'hello-friend-ng'
-theme: 'PaperMod'
+theme: 'PaperModi'
 logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Ethereum_logo_translucent.svg/1396px-Ethereum_logo_translucent.svg.png'
 
 #theme: 'Hinode'
