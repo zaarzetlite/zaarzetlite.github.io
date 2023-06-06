@@ -1,21 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="VcsDirectoryMappings">
-    <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/github.com/zaarzetlite/test_hugo_here" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/themes/PaperMod" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/themes/ananke" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/themes/cleanwhite" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/themes/compose" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/themes/hello-friend-ng" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/themes/hinode" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/themes/my-hinode-site" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/themes/paige" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/unused_themes/ananke" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/unused_themes/cleanwhite" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/unused_themes/compose" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/unused_themes/hello-friend-ng" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/unused_themes/hinode" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/unused_themes/paige" vcs="Git" />
+    <mapping directory="" vcs="Git" />
   </component>
 </project>
