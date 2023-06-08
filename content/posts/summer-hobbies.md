@@ -1,15 +1,14 @@
 ---
-title: "Summer Hobbies"
+title: "Beat the Heat with Cool Hobbies: 10 Summer Ideas to Explore asf fafsgds sd df edfs sdf sdf ab cd ef gh"
 date: 2023-06-05T10:08:42+05:30
 draft: false    
-cover:
+cover:      
     image: https://cdn.pixabay.com/photo/2017/06/11/02/05/wheat-2391348_1280.jpg
 tags: ["hobbies","summer"]
 categories: ["hobbies"]
-
+author: Admin
 ---
 
-[//]: # (Title :)
 
 # Beat the Heat with Cool Hobbies: 10 Summer Ideas to Explore
 
@@ -18,7 +17,8 @@ _The summer season brings a sense of freedom and opportunity, making it an ideal
 [//]: # (![Summer hobbies pic]&#40;https://cdn.pixabay.com/photo/2017/06/11/02/05/wheat-2391348_1280.jpg&#41;)
 Here are 10 summer ideas to explore
 
-## 1: Outdoor photography -
+## 1: Outdoor photography 
+
 ![Outdoor photography](https://cdn.pixabay.com/photo/2016/11/23/13/15/red-panda-1852789_1280.jpg)
 Outdoor photography is a captivating hobby that allows you to capture the beauty of nature. With warm summer weather, you can explore landscapes, experiment with techniques, and shoot breathtaking sunsets, vibrant flowers, and wildlife. Learn about composition, lighting, and framing to enhance your images and tell compelling stories. Summer offers diverse subjects like beaches, forests, and city streets to practice your skills. Grab your camera, venture outside, and let your creativity soar through outdoor photography this summer.
 

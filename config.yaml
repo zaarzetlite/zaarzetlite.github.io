@@ -31,6 +31,7 @@ Params:
   ShowTOC: false
   ShowRelated: true
   ShowReadingTime: true
+  hideSummary: true
   label:
     text: 'Cryptic Blend'
     icon: '/logo.png'
