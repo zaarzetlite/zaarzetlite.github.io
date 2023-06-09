@@ -37,7 +37,8 @@
     /*padding: var(--gap) 20 var(--gap) 20;*/
     position: relative;
     margin-bottom: var(--gap);
-    padding: var(--gap);
+    padding :5px;
+    /*padding: var(--gap);*/
     background: var(--entry);
     overflow: auto;
     /*border-radius: var(--radius);*/
@@ -138,6 +139,7 @@
     width: 100px;
     height: 100px;
     margin-right: 20px;
+    /*border-radius: 0;*/
     border-radius: 5px;
     pointer-events: none;
     /*width: 100%;*/

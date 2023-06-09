@@ -32,6 +32,10 @@ Params:
   ShowRelated: true
   ShowReadingTime: true
   hideSummary: true
+  disableThemeToggle: false
+  IsHome: true
+
+
   label:
     text: 'Cryptic Blend'
     icon: '/logo.png'
