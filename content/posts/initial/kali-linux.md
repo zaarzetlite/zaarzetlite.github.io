@@ -6,7 +6,7 @@ cover:
     image: https://guide-images.cdn.ifixit.com/igi/TiufGNbhhSwJPAoh.large
 author: Admin
 ---
-## _Kali Linux_
+### _Kali Linux_
 _Kali Linux is a Debian-derived Linux distribution designed for digital forensics and penetration testing. It is maintained and funded by Offensive Security._
 _Here are 13 reasons why you should use it for penetration testing_
 

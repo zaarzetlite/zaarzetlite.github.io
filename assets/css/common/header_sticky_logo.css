@@ -1,0 +1,34 @@
+.header_sticky_logo{
+    top: 0;
+    height: auto;
+    position: sticky;
+    background-color: white;
+    z-index: 10;
+    /*display: flex;*/
+    border-bottom:1px solid grey;
+
+    /*align-content: center;*/
+    /*justify-content: center;*/
+    /*text-align: center;*/
+}
+.header_sticky_logo .nav_sticky_logo .logo{
+    /*width: 100%;*/
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    /*height: 0px;*/
+}
+.header_sticky_logo .nav_sticky_logo .logo .a{
+    font-variant: small-caps;
+}
+.header_sticky_logo .nav_sticky_logo .logo a .logo_sticky_text{
+    /*display: inline-block;*/
+    display: inline;
+    font-variant: small-caps;
+    /*display: flex;*/
+}
+
+.header_sticky_logo{
+    background:var(--header-sticky-bg);
+}

@@ -91,3 +91,7 @@ body:not(.dark) #sun {
 .logo-switches {
     flex-wrap: inherit;
 }
+
+/*.logo-switches{*/
+/*    float: right;*/
+/*}*/

@@ -7,21 +7,37 @@ theme: 'PaperMod'
 
 #theme: 'Hinode'
 
-
 menu:
   main:
     - name: Home
       pageRef: /
       weight: 10
-    - name: Products
-      pageRef: /products
-      weight: 20
-    - name: Services
-      pageRef: /services
-      weight: 30
-    - name: Drafts
-      pageRef: /drafts/
-      weight: 40
+    - name: categories
+      pageRef: /categories
+      weight: 400
+    - name: tags
+      pageRef: /tags
+      weight: 500
+    - name: Contact
+      pageRef: /contact
+      weight: 300
+    - name: About
+      pageRef: /about
+      weight: 200
+    - name: posts
+      pageRef: /posts
+      weight: 600
+
+
+#    - name: Products
+#      pageRef: /product s
+#      weight: 20
+#    - name: Services
+#      pageRef: /services
+#      weight: 30
+#    - name: Drafts
+#      pageRef: /drafts/
+#      weight: 40
 
 Params:
   ShowShareButtons: true
@@ -32,8 +48,7 @@ Params:
   ShowRelated: true
   ShowReadingTime: true
   hideSummary: true
-  disableThemeToggle: false
-  IsHome: true
+  ShowBreadCrumbs: true
 
 
   label:
@@ -42,3 +57,4 @@ Params:
 #  label:
 #    text: 'hellooo'
 #    icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Ethereum_logo_translucent.svg/1396px-Ethereum_logo_translucent.svg.png'
+
