@@ -1,5 +1,5 @@
 ---
-title: "Beat the Heat with Cool Hobbies: 10 Summer Ideas to Explore"
+title: "10 Summer Ideas to Explore"
 date: 2023-06-05T10:08:42+05:30
 draft: false    
 cover:      
