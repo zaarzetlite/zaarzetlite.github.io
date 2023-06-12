@@ -39,8 +39,9 @@
 
   <footer class="post-footer">
     {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
+      {{ if .Params.tags }}
       <p>Post tags: </p>
-<!--      <br>-->
+      {{ end }}
     <ul class="post-tags">
       {{- range ($.GetTerms $tags) }}
       <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
