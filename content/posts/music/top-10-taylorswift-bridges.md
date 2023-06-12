@@ -2,7 +2,6 @@
 title: "Top 10 Taylor swift Bridges"
 date: 2023-06-12T01:00:09+05:30
 draft: false
-author: Admin
 cover:
     image: http://crypticblend.me/temp/356315.jpg?optimize=medium&dpr=1.25&auto=webp&width=640
 

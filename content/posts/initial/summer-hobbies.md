@@ -6,7 +6,6 @@ cover:
     image: https://cdn.pixabay.com/photo/2017/06/11/02/05/wheat-2391348_1280.jpg
 tags: ["Hobbies","Summer"]
 categories: ["Cool things to try"]
-author: Admin
 ---
 
 ### Here are 10 summer ideas to explore
