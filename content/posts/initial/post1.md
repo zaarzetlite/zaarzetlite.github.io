@@ -7,5 +7,3 @@ cover:
     image: http://crypticblend.me/temp/logo.jpg
 ---
 
-
-
