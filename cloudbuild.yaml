@@ -1,31 +1,23 @@
 steps:
-- name: 'gcr.io/cloud-builders/wget'
-  args:
-  - '--quiet'
-  - '-O'
-  - 'firebase'
-  - 'https://firebase.tools/bin/linux/latest'
- 
-- name: 'gcr.io/cloud-builders/wget'
-  args:
-  - '--quiet'
-  - '-O'
-  - 'hugo.tar.gz'
-  - 'https://github.com/gohugoio/hugo/releases/download/v${_HUGO_VERSION}/hugo_extended_${_HUGO_VERSION}_Linux-64bit.tar.gz'
-  waitFor: ['-']
- 
-- name: 'ubuntu:18.04'
-  args:
-  - 'bash'
-  - '-c'
-  - |
-    mv hugo.tar.gz /tmp
-    tar -C /tmp -xzf /tmp/hugo.tar.gz
-    mv firebase /tmp
-    chmod 755 /tmp/firebase
-    /tmp/hugo
-    /tmp/firebase deploy --project '${_FIREBASE_PROJECT_NAME}' --non-interactive --only hosting -m "Build ${BUILD_ID}"
-options:
-  logging: CLOUD_LOGGING_ONLY
+  - name: 'gcr.io/cloud-builders/git'
+    args: ['clone', '--depth=1', 'https://github.com/zaarzetlite/zaarzetlite.github.io.git']
+
+  - name: 'gcr.io/cloud-builders/hugo'
+    args: ['--source', 'your-private-repo', '--destination', 'public']
+
+  # Additional steps for copying the generated HTML files to your hosting resources
+  # Modify the destination path as per your hosting setup
+  - name: 'gcr.io/cloud-builders/gsutil'
+    args: ['cp', '-r', 'public', 'gs://www.spokeneagle.com']
+
+# Optional: Specify any substitutions or variables you need
 substitutions:
-  _HUGO_VERSION: 0.69.2
+  _HUGO_VERSION: '0.88.1'
+  _MY_VARIABLE: 'my-value'
+
+# Optional: Set specific tags or branches to trigger the build
+# In this example, it triggers for pushes to the "main" branch
+# and tags starting with "v" (e.g., "v1.0", "v2.1", etc.)
+tags:
+  - 'main'
+  - 'v*'
