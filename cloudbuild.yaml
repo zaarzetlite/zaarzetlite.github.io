@@ -7,11 +7,17 @@ steps:
     args:
       - '-c'
       - |
-        VERSION=0.88.1
-        wget -O /tmp/hugo.tar.gz https://github.com/gohugoio/hugo/releases/download/v$VERSION/hugo_extended_${VERSION}_Linux-64bit.tar.gz
-        tar -xvf /tmp/hugo.tar.gz -C /tmp/
-        mv /tmp/hugo /usr/local/bin/
-        
+        _HUGO_VERSION=0.96.0
+        echo Downloading Hugo version $_HUGO_VERSION...
+        wget \
+          --quiet \
+          -O hugo.tar.gz \
+        https://github.com/gohugoio/hugo/releases/download/v${_HUGO_VERSION}/hugo_extended_${_HUGO_VERSION}_Linux-64bit.tar.gz
+        echo Extracting Hugo files into /tmp...
+        mv hugo.tar.gz /tmp
+        tar -C /tmp -xzf /tmp/hugo.tar.gz
+        echo The Hugo binary is now at /tmp/hugo.
+
   - name: 'gcr.io/cloud-builders/hugo'
     args: ['--source', 'zaarzetlite', '--destination', 'public']
 
