@@ -24,7 +24,7 @@ steps:
     mv firebase /tmp
     chmod 755 /tmp/firebase
     /tmp/hugo
-    /tmp/firebase deploy --project ${_FIREBASE_PROJECT_NAME} --non-interactive --only hosting -m "Build ${BUILD_ID}"
+    /tmp/firebase deploy --project '${_FIREBASE_PROJECT_NAME}' --non-interactive --only hosting -m "Build ${BUILD_ID}"
 options:
   logging: CLOUD_LOGGING_ONLY
 substitutions:
