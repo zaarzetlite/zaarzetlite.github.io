@@ -1,6 +1,6 @@
 steps:
   - name: 'gcr.io/cloud-builders/git'
-    args: ['clone', '--depth=1', 'https://github.com/zaarzetlite/zaarzetlite.github.io.git']
+    args: ['clone', '--depth=1', 'https://github.com/zaarzetlite/temp2.git']
 
   - name: 'gcr.io/cloud-builders/gcloud'
     entrypoint: 'bash'
