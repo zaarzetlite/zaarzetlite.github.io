@@ -9,8 +9,8 @@ steps:
   # Modify the destination path as per your hosting setup
   - name: 'gcr.io/cloud-builders/gsutil'
     args: ['cp', '-r', 'public', 'gs://www.spokeneagle.com']
-  options:
-    logging: CLOUD_LOGGING_ONLY
+options:
+  logging: CLOUD_LOGGING_ONLY
 
 # Optional: Specify any substitutions or variables you need
 substitutions:
