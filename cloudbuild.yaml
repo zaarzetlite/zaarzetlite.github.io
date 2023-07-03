@@ -19,6 +19,7 @@ steps:
         echo The Hugo binary is now at /tmp/hugo.
         sudo mv /tmp/hugo /usr/local/bin/
         echo "moved to /usr/local/bin/"
+        cd zaarzetlite.github.io
   # - name: 'gcr.io/cloud-builders/sudo'
   #   args: ['apt','install','hugo']
 
