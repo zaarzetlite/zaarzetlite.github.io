@@ -19,15 +19,15 @@ steps:
         echo The Hugo binary is now at /tmp/hugo.
         sudo mv /tmp/hugo /usr/local/bin/
         echo "moved to /usr/local/bin/"
-        cd zaarzetlite.github.io
   # - name: 'gcr.io/cloud-builders/sudo'
   #   args: ['apt','install','hugo']
 
-  - name: 'gcr.io/cloud-builders/hugo'
+  - name: 'gcr.io/cloud-builders/docker'
     entrypoint: 'bash'
     args:
       - '-c'
       - |
+        cd zaarzetlite.github.io
         hugo --gc --minify --baseURL "https://www.spokeneagle.com/"
     
   # Additional steps for copying the generated HTML files to your hosting resources
