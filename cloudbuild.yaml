@@ -29,10 +29,16 @@ steps:
   #     - |
   #       cd zaarzetlite.github.io
   #       hugo --gc --minify --baseURL "https://www.spokeneagle.com/"
-    - name: 'ubuntu'
-      args: 
-            cd zaarzetlite.github.io
-            hugo --gc --minify --baseURL "https://www.spokeneagle.com/"
+    steps:
+  - name: 'ubuntu'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        apt-get update
+        cd zaarzetlite.github.io
+        hugo --gc --minify --baseURL "https://www.spokeneagle.com/"
+
     
   # Additional steps for copying the generated HTML files to your hosting resources
   # Modify the destination path as per your hosting setup
