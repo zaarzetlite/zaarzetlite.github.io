@@ -2,21 +2,23 @@ steps:
   - name: 'gcr.io/cloud-builders/git'
     args: ['clone', '--depth=1', 'https://github.com/zaarzetlite/zaarzetlite.github.io.git']
 
-  - name: 'gcr.io/cloud-builders/gcloud'
-    entrypoint: 'bash'
-    args:
-      - '-c'
-      - |
-        _HUGO_VERSION=0.96.0
-        echo Downloading Hugo version $_HUGO_VERSION...
-        wget \
-          --quiet \
-          -O hugo.tar.gz \
-        https://github.com/gohugoio/hugo/releases/download/v${_HUGO_VERSION}/hugo_extended_${_HUGO_VERSION}_Linux-64bit.tar.gz
-        echo Extracting Hugo files into /tmp...
-        mv hugo.tar.gz /tmp
-        tar -C /tmp -xzf /tmp/hugo.tar.gz
-        echo The Hugo binary is now at /tmp/hugo.
+  # - name: 'gcr.io/cloud-builders/gcloud'
+  #   entrypoint: 'bash'
+  #   args:
+  #     - '-c'
+  #     - |
+  #       _HUGO_VERSION=0.96.0
+  #       echo Downloading Hugo version $_HUGO_VERSION...
+  #       wget \
+  #         --quiet \
+  #         -O hugo.tar.gz \
+  #       https://github.com/gohugoio/hugo/releases/download/v${_HUGO_VERSION}/hugo_extended_${_HUGO_VERSION}_Linux-64bit.tar.gz
+  #       echo Extracting Hugo files into /tmp...
+  #       mv hugo.tar.gz /tmp
+  #       tar -C /tmp -xzf /tmp/hugo.tar.gz
+  #       echo The Hugo binary is now at /tmp/hugo.
+  - name: 'gcr.io/cloud-builders/sudo'
+  args:['apt','install','hugo']
 
   - name: 'gcr.io/cloud-builders/hugo'
     entrypoint: 'bash'
