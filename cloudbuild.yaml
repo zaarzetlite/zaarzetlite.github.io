@@ -22,4 +22,6 @@ substitutions:
 # and tags starting with "v" (e.g., "v1.0", "v2.1", etc.)
 tags:
   - 'main'
-  - '^v.*$'
+  - 'v0'
+  - 'v1'
+  - 'v2'
