@@ -2,13 +2,13 @@ steps:
   - name: 'gcr.io/cloud-builders/git'
     args: ['clone', '--depth=1', 'https://github.com/zaarzetlite/zaarzetlite.github.io.git']
 
-  - name: 'gcr.io/cloud-builders/gcloud'
+   - name: 'gcr.io/cloud-builders/gcloud'
     entrypoint: 'bash'
     args:
       - '-c'
       - |
-        export HUGO_VERSION=0.88.1
-        wget -O /tmp/hugo.tar.gz https://github.com/gohugoio/hugo/releases/download/v$HUGO_VERSION/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz
+        VERSION=0.88.1
+        wget -O /tmp/hugo.tar.gz https://github.com/gohugoio/hugo/releases/download/v$VERSION/hugo_extended_${VERSION}_Linux-64bit.tar.gz
         tar -xvf /tmp/hugo.tar.gz -C /tmp/
         mv /tmp/hugo /usr/local/bin/
         
