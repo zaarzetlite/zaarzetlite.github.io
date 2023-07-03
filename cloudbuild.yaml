@@ -22,11 +22,15 @@ steps:
   # - name: 'gcr.io/cloud-builders/sudo'
   #   args: ['apt','install','hugo']
 
-  - name: 'gcr.io/cloud-builders/docker'
-    entrypoint: 'bash'
-    args:
-      - '-c'
-      - |
+  # - name: 'gcr.io/cloud-builders/docker'
+  #   entrypoint: 'bash'
+  #   args:
+  #     - '-c'
+  #     - |
+  #       cd zaarzetlite.github.io
+  #       hugo --gc --minify --baseURL "https://www.spokeneagle.com/"
+  - name: 'ubuntu'
+    args: 
         cd zaarzetlite.github.io
         hugo --gc --minify --baseURL "https://www.spokeneagle.com/"
     
