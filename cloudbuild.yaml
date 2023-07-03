@@ -19,19 +19,19 @@ steps:
         echo The Hugo binary is now at /tmp/hugo.
 
   - name: Build with Hugo
-        env:
+    env:
           # For maximum backward compatibility with Hugo modules
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
-        run: |
+    run: |
           hugo \
             --gc \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
-        with:
-          path: ./public
+  - name: Upload artifact
+    uses: actions/upload-pages-artifact@v1
+    with:
+    path: ./public
     
   # Additional steps for copying the generated HTML files to your hosting resources
   # Modify the destination path as per your hosting setup
