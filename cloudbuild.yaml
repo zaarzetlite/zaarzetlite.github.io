@@ -3,7 +3,7 @@ steps:
     args: ['clone', '--depth=1', 'https://github.com/zaarzetlite/zaarzetlite.github.io.git']
 
   - name: 'gcr.io/cloud-builders/hugo'
-    args: ['--source', 'your-private-repo', '--destination', 'public']
+    args: ['--source', 'zaarzetlite.github.io', '--destination', 'public']
 
   # Additional steps for copying the generated HTML files to your hosting resources
   # Modify the destination path as per your hosting setup
