@@ -22,7 +22,7 @@ steps:
   # - name: 'gcr.io/cloud-builders/sudo'
   #   args: ['apt','install','hugo']
 
-  - name: 'gcr.io/cloud-builders/hugo'
+  - name: 'gcr.io/cloud-builders/gcloud'
     entrypoint: 'bash'
     args:
       - '-c'
