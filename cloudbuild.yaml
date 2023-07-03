@@ -7,7 +7,7 @@ steps:
     args:
       - '-c'
       - |
-        _HUGO_VERSION=0.96.0
+        _HUGO_VERSION=0.112.6
         echo Downloading Hugo version $_HUGO_VERSION...
         wget \
           --quiet \
