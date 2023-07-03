@@ -23,12 +23,6 @@ steps:
           # For maximum backward compatibility with Hugo modules
         HUGO_ENVIRONMENT: production
         HUGO_ENV: production
-    run: |
-          hugo \
-            --gc \
-            --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/"
-
     
   # Additional steps for copying the generated HTML files to your hosting resources
   # Modify the destination path as per your hosting setup
