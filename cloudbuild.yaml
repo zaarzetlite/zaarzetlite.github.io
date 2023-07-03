@@ -11,7 +11,7 @@ steps:
   - '--quiet'
   - '-O'
   - 'hugo.tar.gz'
-  - 'https://github.com/gohugoio/hugo/releases/download/v${_HUGO_VERSION}/'hugo_extended_${_HUGO_VERSION}_Linux-64bit.tar.gz
+  - 'https://github.com/gohugoio/hugo/releases/download/v${_HUGO_VERSION}/hugo_extended_${_HUGO_VERSION}_Linux-64bit.tar.gz'
   waitFor: ['-']
  
 - name: 'ubuntu:18.04'
