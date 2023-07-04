@@ -1,71 +1,9 @@
 steps:
-  - name: 'gcr.io/cloud-builders/git'
-    args: ['clone', '--depth=1', 'https://github.com/zaarzetlite/zaarzetlite.github.io.git']
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/my-hugo-site', '.']
 
-  - name: 'gcr.io/cloud-builders/gcloud'
-    entrypoint: 'bash'
-    args:
-      - '-c'
-      - |
-        _HUGO_VERSION=0.112.6
-        echo Downloading Hugo version $_HUGO_VERSION...
-        wget \
-          --quiet \
-          -O hugo.tar.gz \
-        https://github.com/gohugoio/hugo/releases/download/v${_HUGO_VERSION}/hugo_extended_${_HUGO_VERSION}_Linux-64bit.tar.gz
-        echo Extracting Hugo files into /tmp...
-        mv hugo.tar.gz /tmp
-        tar -C /tmp -xzf /tmp/hugo.tar.gz
-        echo The Hugo binary is now at /tmp/hugo.
-        sudo cp /tmp/hugo /usr/local/bin/
-        echo "moved to /usr/local/bin/"
-        
   # - name: 'gcr.io/cloud-builders/docker'
-  #   args: ['build', '--tag=gcr.io/${PROJECT_ID}/hugo', '.']
-  # - name: 'gcr.io/${PROJECT_ID}/hugo'
-  #   args: ['--help']
-        
-  # - name: 'gcr.io/cloud-builders/sudo'
-  #   args: ['apt','install','hugo']
+  #   args: ['run', '--rm', '-v', '/workspace/public:/public', 'gcr.io/$PROJECT_ID/my-hugo-site', '/public']
 
-  # - name: 'gcr.io/cloud-builders/gcloud'
-  #   entrypoint: 'bash'
-  #   args:
-  #     - '-c'
-  #     - |
-  #       cd zaarzetlite.github.io
-  #       hugo --gc --minify --baseURL "https://www.spokeneagle.com/"
-    
-    
-    # - name: 'ubuntu'
-    #   entrypoint: 'bash'
-    #   args:
-    #     - '-c'
-    #     - |
-    #       apt-get update
-    #       cd zaarzetlite.github.io
-    #       hugo --gc --minify --baseURL "https://www.spokeneagle.com/"
-
-    
-  # Additional steps for copying the generated HTML files to your hosting resources
-  # Modify the destination path as per your hosting setup
   - name: 'gcr.io/cloud-builders/gsutil'
-    args: ['cp', '-r', 'public', 'gs://www.spokeneagle.com/']
-
-options:
-  logging: CLOUD_LOGGING_ONLY
-
-# Optional: Specify any substitutions or variables you need
-substitutions:
-  _HUGO_VERSION: '0.112.6'
-  _MY_VARIABLE: 'my-value'
-
-# Optional: Set specific tags or branches to trigger the build
-# In this example, it triggers for pushes to the "main" branch
-# and tags starting with "v" (e.g., "v1.0", "v2.1", etc.)
-tags:
-  - 'main'
-  - 'v0'
-  - 'v1'
-  - 'v2'
-  # Add more specific tags as needed, or use a wider range if appropriate
+    args: ['-m', 'cp', '-r', '/workspace/public/*', 'gs://www.spokeneagle.com']
