@@ -50,7 +50,7 @@ steps:
   # Additional steps for copying the generated HTML files to your hosting resources
   # Modify the destination path as per your hosting setup
   - name: 'gcr.io/cloud-builders/gsutil'
-    args: ['cp', '-r', 'zaarzetlite.github.io/public', 'gs://www.spokeneagle.com']
+    args: ['cp', '-r', 'zaarzetlite.github.io/public', 'gs://www.spokeneagle.com/']
 
 options:
   logging: CLOUD_LOGGING_ONLY
