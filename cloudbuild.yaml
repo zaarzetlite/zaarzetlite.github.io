@@ -7,3 +7,5 @@ steps:
 
   - name: 'gcr.io/cloud-builders/gsutil'
     args: ['-m', 'cp', '-r', '/workspace/public/*', 'gs://www.spokeneagle.com']
+options:
+  logging: CLOUD_LOGGING_ONLY
