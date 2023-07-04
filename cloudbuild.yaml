@@ -1,6 +1,6 @@
 steps:
   - name: 'gcr.io/cloud-builders/git'
-    args: ['clone', '--depth=1', 'https://github.com/zaarzetlite/temp2.git']
+    args: ['clone', '--depth=1', 'https://github.com/zaarzetlite/zaarzetlite.github.io.git']
 
   - name: 'gcr.io/cloud-builders/gcloud'
     entrypoint: 'bash'
@@ -20,10 +20,10 @@ steps:
         sudo mv /tmp/hugo /usr/local/bin/
         echo "moved to /usr/local/bin/"
         
-  - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '--tag=gcr.io/${PROJECT_ID}/hugo', '.']
-  - name: 'gcr.io/${PROJECT_ID}/hugo'
-    args: ['--help']
+  # - name: 'gcr.io/cloud-builders/docker'
+  #   args: ['build', '--tag=gcr.io/${PROJECT_ID}/hugo', '.']
+  # - name: 'gcr.io/${PROJECT_ID}/hugo'
+  #   args: ['--help']
         
   # - name: 'gcr.io/cloud-builders/sudo'
   #   args: ['apt','install','hugo']
@@ -50,7 +50,7 @@ steps:
   # Additional steps for copying the generated HTML files to your hosting resources
   # Modify the destination path as per your hosting setup
   - name: 'gcr.io/cloud-builders/gsutil'
-    args: ['cp', '-r', 'public', 'gs://www.spokeneagle.com']
+    args: ['cp', '-r', 'zaarzetlite.github.io/public', 'gs://www.spokeneagle.com']
 
 options:
   logging: CLOUD_LOGGING_ONLY
